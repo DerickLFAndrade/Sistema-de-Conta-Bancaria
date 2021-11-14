@@ -6,25 +6,37 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    public class ClasseCBancaria {
+    internal class ClasseCBancaria {
 
             public Cliente titular;
             public int Agencia { get; set; }
             public int NumeroC { get; set; }
-            public double Saldo { get; set; }
+            public double saldo;
 
 
-        public bool Sacar(double Saldo) { 
+       public bool Sacar(double saldo) { 
         
-            if (this.Saldo < 0) {
+            if (this.saldo < 0) {
 
                 return false;
 
             }
-            this.Saldo -= Saldo;
+            this.saldo -= saldo;
             return true;
         
         }
+/* 
+       public bool Depositar(double Saldo) { 
+        
+            if (this.Saldo < 0) { 
+            
+                return false;
+            
+            }
+            this.Saldo += Saldo;
+            return true;
+        
+        }  */
 
 
     }
