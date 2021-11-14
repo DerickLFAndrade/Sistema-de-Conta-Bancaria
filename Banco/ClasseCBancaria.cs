@@ -26,17 +26,26 @@ namespace Banco
         
         }
 
-       public bool Depositar(double saldo) { 
+       public void Depositar(double saldo) { 
         
-            if (this.saldo < 0) { 
-            
-                return false;
-            
-            }
             this.saldo += saldo;
-            return true;
+            
         
         }  
+
+        public bool Trasferir(double valor, ClasseCBancaria contaDestino) { 
+        
+        
+            if (this.saldo < valor)
+                return false;
+
+            this.saldo -= valor;
+            contaDestino.Depositar(valor);
+            return true;
+
+            
+        
+        }
 
 
     }

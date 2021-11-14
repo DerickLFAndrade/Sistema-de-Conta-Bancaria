@@ -22,7 +22,7 @@ namespace Banco
             };
 
 
-            ClasseCBancaria novaConta = new ClasseCBancaria {
+            ClasseCBancaria conta_1 = new ClasseCBancaria {
 
                 titular = derick,
                 Agencia = 156,
@@ -32,16 +32,49 @@ namespace Banco
 
             };
 
-            novaConta.titular.nome = ("Derick Lucas");
 
-           Console.WriteLine($"Saldo atual: R$ {novaConta.saldo}");
 
-           novaConta.Sacar(100);
-           Console.WriteLine($"Valor após o saque: R$ {novaConta.saldo}");
+                    Cliente lucas = new Cliente { 
+            
+              nome = "Lucas",
+              Cpf = "145.132.456.22",
+              Proffisao = "Desenvolvedor Full Stack"
+              
+            
+            };
 
-          novaConta.Depositar(600);
-          Console.WriteLine($"Saldo após o depósito: R$ {novaConta.saldo}");
-            Console.WriteLine(novaConta.titular.nome);
+
+            ClasseCBancaria conta_2 = new ClasseCBancaria {
+
+                titular = lucas,
+                Agencia = 156,
+                NumeroC = 13345,
+                saldo = 2000
+
+
+            };
+
+
+
+        
+             Console.WriteLine($"Titular da conta 1: {conta_1.titular.nome}");
+            Console.WriteLine($"Saldo atual (conta 1): R$ {conta_1.saldo}");
+
+             conta_1.Sacar(100);
+            Console.WriteLine($"Valor após o saque (conta 1): R$ {conta_1.saldo}");
+
+            conta_1.Depositar(600);
+             Console.WriteLine($"Saldo após o depósito (conta 1): R$ {conta_1.saldo} \r\n");
+           
+
+            Console.WriteLine($"Titular da conta 2: {conta_2.titular.nome}");
+            Console.WriteLine($"Saldo antes da transferência (conta 2): R$ {conta_2.saldo}");
+            conta_1.Trasferir(200, conta_2);
+            Console.WriteLine($"Saldo após a transferência (conta 1): R$ {conta_1.saldo}");
+            Console.WriteLine($"Saldo após a transferência (conta 2): R$ {conta_2.saldo}");
+
+
+           
 
             Console.ReadKey();
         }
