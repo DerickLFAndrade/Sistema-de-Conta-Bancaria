@@ -25,18 +25,18 @@ namespace Banco
             return true;
         
         }
-/* 
-       public bool Depositar(double Saldo) { 
+
+       public bool Depositar(double saldo) { 
         
-            if (this.Saldo < 0) { 
+            if (this.saldo < 0) { 
             
                 return false;
             
             }
-            this.Saldo += Saldo;
+            this.saldo += saldo;
             return true;
         
-        }  */
+        }  
 
 
     }

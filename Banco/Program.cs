@@ -39,8 +39,8 @@ namespace Banco
            novaConta.Sacar(100);
            Console.WriteLine($"Valor após o saque: R$ {novaConta.saldo}");
 
-          // novaConta.Depositar(600);
-           // Console.WriteLine($"Saldo após o depósito: R$ {novaConta.Depositar}")
+          novaConta.Depositar(600);
+          Console.WriteLine($"Saldo após o depósito: R$ {novaConta.saldo}");
             Console.WriteLine(novaConta.titular.nome);
 
             Console.ReadKey();
