@@ -73,8 +73,22 @@ namespace Banco
             Console.WriteLine($"Saldo após a transferência (conta 1): R$ {conta_1.saldo}");
             Console.WriteLine($"Saldo após a transferência (conta 2): R$ {conta_2.saldo}");
 
+             Cliente fontes = new Cliente { 
+            
+              nome = "Fontes",
+              Cpf = "123.112.556.22",
+              Proffisao = "Desenvolvedor C#"
+              
+            
+            };
 
-           
+           ClasseCBancaria conta_3 = new ClasseCBancaria
+           {
+               titular = fontes,
+                Agencia = 156,
+                NumeroC = 13345,
+                saldo = 6317
+           }
 
             Console.ReadKey();
         }
