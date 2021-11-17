@@ -14,7 +14,7 @@ namespace Banco
 
             Cliente derick = new Cliente { 
             
-              nome = "Derick",
+              Nome = "Derick",
               Cpf = "145.132.456.87",
               Proffisao = "Desenvolvedor Full Stack"
               
@@ -36,7 +36,7 @@ namespace Banco
 
                     Cliente lucas = new Cliente { 
             
-              nome = "Lucas",
+              Nome = "Lucas",
               Cpf = "145.132.456.22",
               Proffisao = "Desenvolvedor Full Stack"
               
@@ -57,7 +57,7 @@ namespace Banco
 
 
         
-             Console.WriteLine($"Titular da conta 1: {conta_1.titular.nome}");
+             Console.WriteLine($"Titular da conta 1: {conta_1.titular.Nome}");
             Console.WriteLine($"Saldo atual (conta 1): R$ {conta_1.saldo}");
 
              conta_1.Sacar(100);
@@ -67,7 +67,7 @@ namespace Banco
              Console.WriteLine($"Saldo após o depósito (conta 1): R$ {conta_1.saldo} \r\n");
            
 
-            Console.WriteLine($"Titular da conta 2: {conta_2.titular.nome}");
+            Console.WriteLine($"Titular da conta 2: {conta_2.titular.Nome}");
             Console.WriteLine($"Saldo antes da transferência (conta 2): R$ {conta_2.saldo}");
             conta_1.Trasferir(200, conta_2);
             Console.WriteLine($"Saldo após a transferência (conta 1): R$ {conta_1.saldo}");
@@ -75,7 +75,7 @@ namespace Banco
 
              Cliente fontes = new Cliente { 
             
-              nome = "Fontes",
+              Nome = "Fontes",
               Cpf = "123.112.556.22",
               Proffisao = "Desenvolvedor C#"
               
@@ -88,7 +88,10 @@ namespace Banco
                 Agencia = 156,
                 NumeroC = 13345,
                 saldo = 6317
-           }
+           };
+
+
+           Console.WriteLine(conta_1.titular);
 
             Console.ReadKey();
         }
