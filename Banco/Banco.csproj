@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="ClasseCBancaria.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Funci\Diretor.cs" />
+    <Compile Include="Funci\Funcionarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

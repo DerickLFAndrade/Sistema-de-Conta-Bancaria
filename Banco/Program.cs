@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banco.Funci;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -91,8 +92,12 @@ namespace Banco
            };
 
 
-           Console.WriteLine(conta_1.titular);
+            Funcionarios funcionario_1 = new Funcionarios("Derick", "111.111.111-11"); 
 
+            
+
+           Console.WriteLine(conta_1.titular);
+            Console.WriteLine(Funcionarios.TotalDeFuncionarios);
             Console.ReadKey();
         }
     }
