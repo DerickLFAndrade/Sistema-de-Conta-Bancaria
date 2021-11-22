@@ -1,48 +1,29 @@
-﻿using ByteBank.Funcionarios;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank {
+namespace ByteBank.Funcionarios {
     internal class Program {
         static void Main() {
-
-            GerenciadorBonificacao gerenciar = new GerenciadorBonificacao();
-
-            Funcionario derick = new Funcionario ("111.111.111-11") {
-
-                Nome = "Derick",
-                Salario = 2000
-            };
-            gerenciar.Registrar(derick);
-
-            Console.WriteLine($"Criando funcionário: {Funcionario.TotalDeFuncionarios}");
-            Diretor lucas = new Diretor ("222.222.222-22") {
-
-                Nome = "Lucas",
-                Salario = 15000
-
-            };
-            Console.WriteLine(derick.CPF);
-
-            Console.WriteLine(lucas.CPF);
-
-            gerenciar.Registrar(lucas);
-
-            Console.WriteLine(derick.Nome);
-            Console.WriteLine("Bonificação: R$ " + derick.GetBonificacao() +"\r\n");
-
-            Console.WriteLine(lucas.Nome);
-            Console.WriteLine("Bonificação: R$ " + lucas.GetBonificacao() + "\r\n");
-
-
-            Console.WriteLine("Total bonificações: R$ " + gerenciar.GetTotalBonificacao());
-           
+            CriarFuncionarios();
+            Console.ReadLine();
         }
-    }
-    
-    }
 
+        public static void CriarFuncionarios () {
+            Funcionarios lucas = new Gerente("Lucas", "Gerente de contas", 3451.35);
 
+            Funcionarios derick = new Auxiliar("176.054.327.63", "", 6657.30);
+
+            Funcionarios roberto = new Designer ("Roberto", "000.000.000.00", 4657.13);
+
+            Funcionarios fontes = new Diretor("Fontes", "444.444.444-44", 8465.64);
+
+            fontes.AumentaSalario();
+            Console.WriteLine("Novo salário do diretor: R$ " + fontes.Salario);
+        }
+
+    }
+}

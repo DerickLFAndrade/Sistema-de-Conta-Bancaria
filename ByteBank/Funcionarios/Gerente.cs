@@ -1,15 +1,13 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios {
-    internal class Diretor : Funcionarios {
+    public class Gerente : Funcionarios{
 
-     
-        public Diretor (string nome, string desc, double salario) {
+        public Gerente (string nome, string desc, double salario) {
             //Matricula = mat;
             Nome = nome;
             Descricao = desc;
@@ -18,9 +16,6 @@ namespace ByteBank.Funcionarios {
         public override void AumentaSalario() {
             Salario *= 1.75;
         }
-
-
-
 
     }
 }
