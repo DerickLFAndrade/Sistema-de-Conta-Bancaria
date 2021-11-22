@@ -17,8 +17,9 @@ namespace Banco.Funci {
         public Funcionarios (string nome, string cpf) {
             Nome = nome;
             Cpf = cpf;
-            Console.WriteLine("Criando Funcionário");
+            
             TotalDeFuncionarios ++;
+            Console.WriteLine("Criando Funcionário ");
         }
     }
 }

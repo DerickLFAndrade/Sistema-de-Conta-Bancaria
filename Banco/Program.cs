@@ -21,8 +21,6 @@ namespace Banco
               
             
             };
-
-
             ClasseCBancaria conta_1 = new ClasseCBancaria {
 
                 titular = derick,
@@ -33,9 +31,9 @@ namespace Banco
 
             };
 
+            
 
-
-                    Cliente lucas = new Cliente { 
+            Cliente lucas = new Cliente { 
             
               Nome = "Lucas",
               Cpf = "145.132.456.22",
@@ -43,8 +41,6 @@ namespace Banco
               
             
             };
-
-
             ClasseCBancaria conta_2 = new ClasseCBancaria {
 
                 titular = lucas,
@@ -56,21 +52,23 @@ namespace Banco
             };
 
 
+            
 
-        
              Console.WriteLine($"Titular da conta 1: {conta_1.titular.Nome}");
-            Console.WriteLine($"Saldo atual (conta 1): R$ {conta_1.saldo}");
+             Console.WriteLine($"Saldo atual (conta 1): R$ {conta_1.saldo}");
 
              conta_1.Sacar(100);
-            Console.WriteLine($"Valor após o saque (conta 1): R$ {conta_1.saldo}");
+             Console.WriteLine($"Valor após o saque (conta 1): R$ {conta_1.saldo}");
 
-            conta_1.Depositar(600);
+             conta_1.Depositar(600);
              Console.WriteLine($"Saldo após o depósito (conta 1): R$ {conta_1.saldo} \r\n");
            
 
             Console.WriteLine($"Titular da conta 2: {conta_2.titular.Nome}");
             Console.WriteLine($"Saldo antes da transferência (conta 2): R$ {conta_2.saldo}");
+
             conta_1.Trasferir(200, conta_2);
+
             Console.WriteLine($"Saldo após a transferência (conta 1): R$ {conta_1.saldo}");
             Console.WriteLine($"Saldo após a transferência (conta 2): R$ {conta_2.saldo}");
 
@@ -82,8 +80,7 @@ namespace Banco
               
             
             };
-
-           ClasseCBancaria conta_3 = new ClasseCBancaria
+             ClasseCBancaria conta_3 = new ClasseCBancaria
            {
                titular = fontes,
                 Agencia = 156,
@@ -93,10 +90,10 @@ namespace Banco
 
 
             Funcionarios funcionario_1 = new Funcionarios("Derick", "111.111.111-11"); 
+           
+          
 
-            
 
-           Console.WriteLine(conta_1.titular);
             Console.WriteLine(Funcionarios.TotalDeFuncionarios);
             Console.ReadKey();
         }
