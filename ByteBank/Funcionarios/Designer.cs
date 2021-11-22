@@ -14,7 +14,7 @@ namespace ByteBank.Funcionarios {
             Salario = salario;
         }
         public override void AumentaSalario() {
-            Salario *= 1.75;
+            Salario *= 1.45;
         }
 
     }

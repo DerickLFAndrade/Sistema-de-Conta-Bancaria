@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ByteBank.Funcionarios {
     public abstract class Funcionarios {
         //ATRIBUTOS DA CLASSE
+
         public static int TotalFuncionarios { get; private set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
@@ -46,15 +47,13 @@ set;
             TotalFuncionarios++;
             Console.WriteLine($"Total {TotalFuncionarios}");
 
-
-
         }
 
-       
+      
 
-        public virtual void AumentaSalario() {
-            Salario *= 1.1;
-        }
+
+        //Metodos abstratos só são permitidos em classes abstratas
+        public abstract void AumentaSalario();
 
     }
 }

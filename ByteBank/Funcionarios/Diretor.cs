@@ -6,9 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios {
-    internal class Diretor : Funcionarios {
+    public class Diretor : FuncionarioAutenticavel {
 
-     
         public Diretor (string nome, string desc, double salario) {
             //Matricula = mat;
             Nome = nome;
@@ -20,7 +19,7 @@ namespace ByteBank.Funcionarios {
         }
 
 
-
+      
 
     }
 }
